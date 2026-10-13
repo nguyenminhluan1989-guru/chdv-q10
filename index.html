@@ -94,8 +94,10 @@ section.soft{background:var(--soft)}
 .hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,20,18,.55) 0%,rgba(10,20,18,.2) 60%,rgba(10,20,18,0) 100%),linear-gradient(180deg,rgba(10,20,18,.15) 0%,rgba(10,20,18,.45) 45%,rgba(10,20,18,.9) 100%)}
 .hero-in{text-shadow:0 1px 3px rgba(0,0,0,.45)}
 .hero-in{position:relative;width:100%;padding-block:48px 40px;display:flex;flex-direction:column;gap:16px}
-.hero-full h1{max-width:20ch;color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.35)}
-.hero-sub{max-width:58ch;color:#e3ebe8}
+.hero-full h1{max-width:none;color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.35)}
+@media (min-width:900px){.hero-full h1{font-size:clamp(2.2rem,3.5vw,3.4rem);line-height:1.15;text-wrap:wrap}.hero-full h1 .l2,.hero-sub .l2{display:block}}
+.hero-sub{max-width:none;color:#e3ebe8}
+@media (min-width:900px){.hero-sub{font-size:1.15rem}}
 .eyebrow-l{font-size:var(--s-sm);font-weight:700;color:#f3c64f;letter-spacing:.02em}
 .hero-cap-l{font-size:var(--s-xs);font-style:italic;color:#b9c6c2}
 .btn-gold{background:var(--gold);border-color:var(--gold);color:#16201f}
@@ -232,8 +234,8 @@ footer .wrap{display:flex;flex-direction:column;gap:14px}
   <div class="hero-shade"></div>
   <div class="wrap hero-in">
     <p class="eyebrow-l">Căn hộ dịch vụ · Quận 10 · TP.HCM</p>
-    <h1>Không cần vận hành, đã có sẵn dòng tiền 100 triệu/tháng trong 5 năm</h1>
-    <p class="hero-sub">Tòa căn hộ dịch vụ 11 phòng, hơn 103 m², đã cho một bên thuê nguyên tòa với hợp đồng 5 năm. Người mua nhận nhà là nhận tiền thuê mỗi tháng.</p>
+    <h1>Không cần vận hành, đã có sẵn dòng tiền <span class="l2"><span style="white-space:nowrap">100 triệu/tháng</span> trong 5 năm</span></h1>
+    <p class="hero-sub">Tòa căn hộ dịch vụ 11 phòng, hơn 103 m², đã cho một bên thuê nguyên tòa với hợp đồng 5 năm. <span class="l2">Người mua nhận nhà là nhận tiền thuê mỗi tháng.</span></p>
     <div class="btns">
       <a class="btn btn-gold" href="#dang-ky">Nhận hồ sơ tài sản</a>
       <a class="btn btn-ghost" href="#dong-tien">Xem dòng tiền</a>
